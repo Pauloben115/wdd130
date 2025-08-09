@@ -1,77 +1,71 @@
-/* Reset all elements */
+/* Color and font variables */
+:root {
+  --primary-color: #006994;
+  --secondary-color: #004466;
+  --accent1-color: #00aaff;
+  --accent2-color: #ffffff;
+
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* Reset default spacing and use box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS Variables for colors and fonts */
-:root {
-  --primary-color: #2a9d8f;      /* example teal */
-  --secondary-color: #264653;    /* dark blue */
-  --accent1-color: #e9c46a;      /* mustard yellow */
-  --accent2-color: #f4a261;      /* orange */
-  --heading-font: 'Montserrat', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
-}
-
-/* Body styles */
+/* Body text setup */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 
-/* Center header, main, footer and limit width */
+/* Limit page width and center content */
 header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-/* Header styles */
+/* Header */
 header {
   background-color: var(--primary-color);
   color: var(--accent2-color);
+  padding: 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
-  gap: 20px;
 }
 
 header img {
-  max-height: 60px;
+  height: 60px;
 }
 
-/* Navigation inside header */
-header nav a {
+/* Navigation links */
+nav a {
   color: var(--accent2-color);
+  margin-left: 20px;
   text-decoration: none;
-  margin-right: 16px;
   font-weight: bold;
-  font-size: 1rem;
-}
-
-header nav a:hover {
-  text-decoration: underline;
 }
 
 /* Headings */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-  margin-bottom: 12px;
 }
 
-/* Basic margin/padding for nav, p, section, article */
+/* General spacing */
 nav, p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* Hero div relative positioning */
+/* Hero section layout */
 .hero {
   position: relative;
-  margin-bottom: 40px;
 }
 
 /* Hero background image */
@@ -81,71 +75,55 @@ nav, p, section, article {
   height: auto;
 }
 
-/* Hero h1 positioned absolutely */
+/* Hero heading overlay */
 .hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.8;
   background-color: var(--accent1-color);
   color: #fff;
-  font-size: 2.5rem;
-  font-weight: 700;
 }
 
-/* Hero article positioned absolutely */
+/* Hero article overlay */
 .hero article {
   position: absolute;
   bottom: 20px;
-  right: 20px;
-  background-color: rgba(38, 70, 83, 0.8); /* semi-transparent dark overlay */
-  color: #fff;
-  padding: 12px 16px;
-  max-width: 300px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 16px;
+  max-width: 60%;
   border-radius: 8px;
-  font-size: 1rem;
-  line-height: 1.4;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Image inside hero article floated right */
+/* Float article image to the right */
 .hero article img {
   float: right;
   width: 125px;
   margin-left: 12px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  border-radius: 6px;
 }
 
 /* Footer styling */
 footer {
   background-color: var(--secondary-color);
-  color: var(--accent1-color);
+  color: var(--accent2-color);
   text-align: center;
-  padding: 16px 8px;
-  margin-top: 40px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
-/* Social media nav */
-.socialmedia {
-  margin-top: 12px;
-}
-
-/* Remove underline from social media links */
+/* Social media icons */
 .socialmedia a {
   text-decoration: none;
-  margin: 0 8px;
-  display: inline-block;
+  margin: 0 10px;
 }
 
-.socialmedia a img {
+.socialmedia img {
   width: 30px;
-  height: 30px;
-}
-
-/* Social media icons hover effect */
-.socialmedia a:hover img {
-  opacity: 0.7;
-  cursor: pointer;
+  height: auto;
+  vertical-align: middle;
 }
