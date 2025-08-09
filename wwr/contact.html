@@ -3,26 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - White Water Rafting</title>
-  <link rel="stylesheet" href="styles/rafting.css" />
+  <title>Contact Us | Whitewater Rafting</title>
+  <meta name="description" content="Contact Whitewater Rafting for questions, reservations, or website feedback." />
+  <link rel="stylesheet" href="rafting.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
+    <h1>Whitewater Rafting</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+      </ul>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <h1>Contact Page Coming Soon</h1>
-    <p>Contact information will be added here.</p>
+
+    <!-- Company Info -->
+    <section id="company-info">
+      <h2>Contact Information</h2>
+      <p>Plot 4, Adejumo Layout, Ibadan, Oyo State</p>
+      <p>Phone: +234 810 086 4037</p>
+      <p>Email: <a href="mailto:Pauloben74@gmail.com">Pauloben74@gmail.com</a></p>
+
+      <!-- Embedded Google Map -->
+      <div id="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.333629657722!2d3.9160515152938026!3d7.429502494664493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b85f3f17bbddf%3A0x83952a52c97e5a90!2sAdejumo%20Layout%2C%20Ibadan!5e0!3m2!1sen!2sng!4v1691572165616!5m2!1sen!2sng"
+          width="600"
+          height="450"
+          style="border:none;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Adejumo Layout, Ibadan, Oyo State Google Map"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Employee Profile -->
+    <section id="employees">
+      <h2>Meet Our Team</h2>
+      <figure>
+        <img src="images/employee1.jpg" alt="Paul Oben, Lead Guide" />
+        <figcaption>Paul Oben - Lead Guide</figcaption>
+      </figure>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required />
+
+        <fieldset>
+          <legend>Purpose of your message</legend>
+          <label>
+            <input type="radio" name="purpose" value="general" required />
+            General Inquiry
+          </label>
+          <label>
+            <input type="radio" name="purpose" value="reservation" />
+            Reservation Question
+          </label>
+          <label>
+            <input type="radio" name="purpose" value="suggestion" />
+            Website Suggestion
+          </label>
+        </fieldset>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label>
+          <input type="checkbox" name="subscribe" />
+          Please subscribe me to the monthly newsletter
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 White Water Rafting</p>
+    <p>© Whitewater Rafting | All rights reserved</p>
+    <p><a href="images/contact-wireframe.png" target="_blank" rel="noopener">View Contact Page Wireframe</a></p>
   </footer>
+
 </body>
 </html>
