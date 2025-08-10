@@ -3,26 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trips - White Water Rafting</title>
+  <title>Trips - Whitewater Rafting</title>
+  <meta name="description" content="Explore our exciting whitewater rafting trips designed for all skill levels. Book your adventure today!" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <nav>
+    <a href="index.html" aria-label="Whitewater Rafting Home">
+      <img src="images/logo.png" alt="Whitewater Rafting Logo" width="150" />
+    </a>
+    <h1>Whitewater Rafting Adventures</h1>
+    <nav aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
+      <a href="trips.html" aria-current="page">Trips</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <h1>Trips Page Coming Soon</h1>
-    <p>Details about exciting rafting trips will be added here.</p>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/trips-hero.jpg" alt="Group rafting on whitewater river" />
+      <h2>Choose Your Adventure</h2>
+      <article>
+        <p>From beginner floats to adrenaline-pumping rapids, we have a trip for every thrill-seeker. Discover your next adventure today!</p>
+      </article>
+    </section>
+
+    <!-- Trips Grid -->
+    <section>
+      <h2>Our Trips</h2>
+      <div class="trips-grid">
+
+        <article class="trip-card">
+          <img src="images/raft1.jpg" alt="Los Dientes del Diablo rafting trip" />
+          <h3>Los Dientes del Diablo</h3>
+          <p>Experience challenging rapids and breathtaking scenery on this full-day adventure suitable for experienced rafters.</p>
+          <p><strong>Duration:</strong> Full Day</p>
+          <p><strong>Price:</strong> $120 per person</p>
+        </article>
+
+        <article class="trip-card">
+          <img src="images/raft2.jpg" alt="Big Mallard rafting trip" />
+          <h3>Big Mallard</h3>
+          <p>Perfect for families and beginners, enjoy calm waters and beautiful landscapes on this half-day trip.</p>
+          <p><strong>Duration:</strong> Half Day</p>
+          <p><strong>Price:</strong> $75 per person</p>
+        </article>
+
+        <article class="trip-card">
+          <img src="images/raft3.jpg" alt="Half Day Adventure rafting trip" />
+          <h3>Half Day Adventure</h3>
+          <p>Get your adrenaline pumping with exciting rapids on this half-day trip designed for intermediate rafters.</p>
+          <p><strong>Duration:</strong> Half Day</p>
+          <p><strong>Price:</strong> $90 per person</p>
+        </article>
+
+        <article class="trip-card">
+          <img src="images/raft4.jpg" alt="Rapid Fire rafting trip" />
+          <h3>Rapid Fire</h3>
+          <p>For thrill-seekers ready to tackle some of the fastest rapids in the region. Advanced skill level required.</p>
+          <p><strong>Duration:</strong> Full Day</p>
+          <p><strong>Price:</strong> $140 per person</p>
+        </article>
+
+        <article class="trip-card">
+          <img src="images/raft5.jpg" alt="Sunset Float rafting trip" />
+          <h3>Sunset Float</h3>
+          <p>Relax and enjoy a peaceful rafting trip as the sun sets over the river. Great for all skill levels.</p>
+          <p><strong>Duration:</strong> Evening</p>
+          <p><strong>Price:</strong> $65 per person</p>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 White Water Rafting</p>
+    <p>© 2025 Whitewater Rafting Adventures | Paul Benson Ikechukwu</p>
+    <nav class="socialmedia" aria-label="Social media links">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="images/facebook.png" alt="Facebook logo" />
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <img src="images/twitter.png" alt="Twitter logo" />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="images/instagram.png" alt="Instagram logo" />
+      </a>
+    </nav>
   </footer>
+
 </body>
 </html>

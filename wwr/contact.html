@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us | Whitewater Rafting</title>
+  <title>Contact Us - Whitewater Rafting</title>
   <meta name="description" content="Contact Whitewater Rafting for questions, reservations, or website feedback." />
-  <link rel="stylesheet" href="rafting.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <h1>Whitewater Rafting</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
-      </ul>
+    <a href="index.html" aria-label="Whitewater Rafting Home">
+      <img src="images/logo.png" alt="Whitewater Rafting Logo" width="150" />
+    </a>
+    <h1>Whitewater Rafting Adventures</h1>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html" aria-current="page">Contact</a>
     </nav>
   </header>
 
@@ -27,9 +29,11 @@
     <!-- Company Info -->
     <section id="company-info">
       <h2>Contact Information</h2>
-      <p>Plot 4, Adejumo Layout, Ibadan, Oyo State</p>
-      <p>Phone: +234 810 086 4037</p>
-      <p>Email: <a href="mailto:Pauloben74@gmail.com">Pauloben74@gmail.com</a></p>
+      <address>
+        Plot 4, Adejumo Layout, Ibadan, Oyo State<br />
+        Phone: <a href="tel:+2348100864037">+234 810 086 4037</a><br />
+        Email: <a href="mailto:Pauloben74@gmail.com">Pauloben74@gmail.com</a>
+      </address>
 
       <!-- Embedded Google Map -->
       <div id="map-container">
@@ -97,8 +101,18 @@
 
   <!-- Footer -->
   <footer>
-    <p>© Whitewater Rafting | All rights reserved</p>
-    <p><a href="images/contact-wireframe.png" target="_blank" rel="noopener">View Contact Page Wireframe</a></p>
+    <p>© 2025 Whitewater Rafting Adventures | Paul Benson Ikechukwu</p>
+    <nav class="socialmedia" aria-label="Social media links">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="images/facebook.png" alt="Facebook logo" />
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <img src="images/twitter.png" alt="Twitter logo" />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="images/instagram.png" alt="Instagram logo" />
+      </a>
+    </nav>
   </footer>
 
 </body>
