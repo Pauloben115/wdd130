@@ -18,6 +18,8 @@ body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--secondary-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header, main, footer {
@@ -34,6 +36,7 @@ header {
 
 header img {
   height: 60px;
+  width: auto;
 }
 
 nav a {
@@ -41,6 +44,11 @@ nav a {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
+}
+
+nav a:hover,
+.socialmedia a:hover {
+  color: var(--accent2-color);
 }
 
 h1, h2 {
@@ -83,6 +91,7 @@ nav, p, section, article {
   left: 10%;
   font-size: 1rem;
   border-radius: 8px;
+  line-height: 1.5;
 }
 
 .hero article img {
@@ -90,6 +99,12 @@ nav, p, section, article {
   width: 125px;
   margin-left: 12px;
   border-radius: 8px;
+}
+
+.hero article::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 footer {
@@ -113,4 +128,11 @@ footer {
   width: 32px;
   height: 32px;
   vertical-align: middle;
+}
+
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
