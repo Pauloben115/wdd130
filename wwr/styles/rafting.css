@@ -1,3 +1,147 @@
+/* CSS Variables */
+:root {
+  --primary-color: #1e3d59;
+  --accent1-color: #f5a623;
+  --accent2-color: #e0e0e0;
+  --heading-font: 'Georgia', serif;
+  --body-font: 'Arial', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--primary-color);
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Page layout */
+header,
+main,
+footer {
+  width: 840px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--accent1-color);
+  padding-bottom: 8px;
+}
+
+header img {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--accent1-color);
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+/* Section and article layout */
+section, article {
+  margin: 16px 0;
+  padding: 8px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.85;
+  background-color: var(--accent1-color);
+  color: white;
+  font-size: 2rem;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 12px;
+  max-width: 500px;
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 12px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  border-top: 2px solid var(--accent1-color);
+  text-align: center;
+  font-size: 14px;
+  margin-top: 24px;
+  padding-top: 16px;
+}
+
+footer p {
+  margin-bottom: 12px;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ======================= */
+/* Contact Page & Forms */
+/* ======================= */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,6 +154,8 @@
 .contact-form button {
   width: 100%;
   margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .contact-form fieldset {
@@ -24,6 +170,10 @@
   gap: 0.5rem;
 }
 
+/* ======================= */
+/* Employee Profiles */
+/* ======================= */
+
 .employee-section {
   text-align: center;
   margin-top: 3rem;
@@ -34,6 +184,7 @@
   justify-content: center;
   gap: 2rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .employee-profiles figure {
@@ -43,4 +194,30 @@
 .employee-profiles img {
   width: 100%;
   border-radius: 8px;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  header,
+  main,
+  footer {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero article {
+    font-size: 0.9rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-profiles {
+    flex-direction: column;
+    align-items: center;
+  }
 }
