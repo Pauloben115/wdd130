@@ -1,13 +1,25 @@
-/* CSS Variables */
+/* ======================= */
+/* CSS Variables           */
+/* ======================= */
 :root {
   --primary-color: #1e3d59;
   --accent1-color: #f5a623;
   --accent2-color: #e0e0e0;
   --heading-font: 'Georgia', serif;
   --body-font: 'Arial', sans-serif;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  --border-radius: 8px;
+
+  --transition-speed: 0.3s;
 }
 
-/* Reset */
+/* ======================= */
+/* Reset                   */
+/* ======================= */
 * {
   margin: 0;
   padding: 0;
@@ -21,57 +33,82 @@ body {
   line-height: 1.6;
 }
 
-/* Page layout */
+/* ======================= */
+/* Page Layout             */
+/* ======================= */
 header,
 main,
 footer {
   width: 840px;
   margin: 0 auto;
-  padding: 16px;
+  padding: var(--spacing-md);
 }
 
-/* Header */
+/* ======================= */
+/* Header (CSS Grid)       */
+/* ======================= */
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
+  padding: var(--spacing-md) 0;
   border-bottom: 3px solid var(--accent1-color);
-  padding-bottom: 8px;
+  gap: var(--spacing-lg);
 }
 
 header img {
   height: 60px;
+  justify-self: start;
+  border-radius: var(--border-radius);
 }
 
+/* ======================= */
+/* Navigation (Flexbox)    */
+/* ======================= */
 nav {
   display: flex;
-  gap: 16px;
+  justify-content: flex-end;
+  gap: var(--spacing-lg);
 }
 
 nav a {
-  text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
 }
 
-nav a:hover {
-  color: var(--accent1-color);
+nav a:hover,
+nav a:focus {
+  background-color: var(--accent1-color);
+  color: white;
+  outline: none;
 }
 
-/* Headings */
+/* ======================= */
+/* Headings                */
+/* ======================= */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-  margin-bottom: 12px;
+  margin-bottom: var(--spacing-md);
 }
 
-/* Section and article layout */
+/* ======================= */
+/* Section and Article      */
+/* ======================= */
 section, article {
-  margin: 16px 0;
-  padding: 8px;
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-sm);
 }
 
-/* Hero Section */
+/* ======================= */
+/* Hero Section            */
+/* ======================= */
 .hero {
   position: relative;
 }
@@ -86,12 +123,13 @@ section, article {
   position: absolute;
   top: 20px;
   width: 100%;
-  padding: 16px;
+  padding: var(--spacing-md);
   text-align: center;
   opacity: 0.85;
   background-color: var(--accent1-color);
   color: white;
   font-size: 2rem;
+  border-radius: var(--border-radius);
 }
 
 .hero article {
@@ -99,34 +137,81 @@ section, article {
   bottom: 20px;
   left: 20px;
   background-color: rgba(255, 255, 255, 0.85);
-  padding: 12px;
+  padding: var(--spacing-md);
   max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .hero article img {
   float: right;
   width: 125px;
-  margin-left: 12px;
-  border-radius: 8px;
+  margin-left: var(--spacing-md);
+  border-radius: var(--border-radius);
 }
 
-/* Footer */
+/* ======================= */
+/* Adventures Section      */
+/* ======================= */
+.adventures {
+  margin-top: var(--spacing-lg);
+}
+
+.adventure-gallery {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Allows horizontal scroll on small screens */
+  padding-bottom: var(--spacing-md);
+}
+
+.adventure-gallery figure {
+  flex: 1 1 18%;
+  text-align: center;
+  margin: 0;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-speed) ease;
+}
+
+.adventure-gallery img:hover,
+.adventure-gallery img:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ======================= */
+/* Footer                  */
+/* ======================= */
 footer {
   border-top: 2px solid var(--accent1-color);
   text-align: center;
   font-size: 14px;
-  margin-top: 24px;
-  padding-top: 16px;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
 }
 
 footer p {
-  margin-bottom: 12px;
+  margin-bottom: var(--spacing-md);
 }
 
 .socialmedia {
   display: flex;
-  justify-content: center;
-  gap: 12px;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
 }
 
 .socialmedia a {
@@ -136,72 +221,32 @@ footer p {
 .socialmedia img {
   width: 30px;
   height: 30px;
+  filter: var(--primary-color);
+  transition: transform var(--transition-speed);
+}
+
+.socialmedia img:hover,
+.socialmedia img:focus {
+  transform: scale(1.1);
+  outline: none;
 }
 
 /* ======================= */
-/* Contact Page & Forms */
+/* Responsive Styles       */
 /* ======================= */
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  width: 100%;
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-.contact-form fieldset {
-  border: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-.contact-form .radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* ======================= */
-/* Employee Profiles */
-/* ======================= */
-
-.employee-section {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.employee-profiles {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.employee-profiles figure {
-  width: 150px;
-}
-
-.employee-profiles img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Responsive */
 @media screen and (max-width: 900px) {
   header,
   main,
   footer {
     width: 90%;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  nav {
+    gap: var(--spacing-md);
   }
 
   .hero h1 {
@@ -212,12 +257,24 @@ footer p {
     font-size: 0.9rem;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .adventure-gallery {
+    flex-wrap: wrap;
   }
 
-  .employee-profiles {
+  .adventure-gallery figure {
+    flex: 1 1 45%;
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    gap: var(--spacing-sm);
+  }
+
+  .adventure-gallery figure {
+    flex: 1 1 100%;
   }
 }
