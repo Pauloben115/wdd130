@@ -1,38 +1,75 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paul Benson Ikechukwu | WDD 130</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="#">Home</a>
-        <a href="wwr/">Rafting Website</a>
-      </nav>
-    </header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Welcome to White Water Rafting Co., offering thrilling adventures for all skill levels." />
+  <meta name="author" content="Paul Benson Ikechukwu" />
+  <title>Home | White Water Rafting Co.</title>
+  <link rel="stylesheet" href="styles/rafting.css" />
+</head>
+<body>
 
-    <main>
-      <h1>Paul Benson Ikechukwu | WDD 130</h1>
-      <img
-        src="images/profile.jpg"
-        alt="Hello, my name is Paul Benson Ikechukwu"
-        width="200"
-      />
-      <p>
-        Hi! I’m Paul Benson Ikechukwu from Nigeria. 
-        I enjoy hiking, coding, and spending quality time with my family.
-        Exploring nature through hiking helps me stay active and inspired, 
-        while coding fuels my passion for problem-solving and creativity.
-        Spending time with my family keeps me grounded and motivated.
-         I’m excited to continue learning and growing in web development
-          through this course!
-      </p>
-    </main>
+  <header>
+    <img src="images/logo.png" alt="White Water Rafting Co. Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-    <footer>
-      <p>&copy; 2025 🌴 Paul Benson Ikechukwu 🌴 Nigeria</p>
-    </footer>
-  </body>
+  <main>
+    <!-- Hero Section -->
+    <div class="hero">
+      <img src="images/hero.jpg" alt="Rafting Adventure" />
+      <h1>Experience the Thrill of White Water Rafting!</h1>
+      <article>
+        <img src="images/client.jpg" alt="Happy Client" />
+        <p>
+          Our expert guides ensure a safe, exciting adventure. Join us for unforgettable river journeys!
+        </p>
+      </article>
+    </div>
+
+    <!-- Adventures Section -->
+    <section class="adventures">
+      <h2>Adventure Awaits!</h2>
+      <div class="adventure-gallery">
+        <figure>
+          <img src="images/los-dientes.jpg" alt="Los Dientes del Diablo Rapid" />
+          <figcaption>Los Dientes del Diablo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/big-mallard.jpg" alt="Big Mallard Rapid" />
+          <figcaption>Big Mallard</figcaption>
+        </figure>
+        <figure>
+          <img src="images/half-day.jpg" alt="Half Day Adventure" />
+          <figcaption>Half Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/summer-fun.jpg" alt="Summer Fun Rapids" />
+          <figcaption>Summer Fun</figcaption>
+        </figure>
+        <figure>
+          <img src="images/thunder-rush.jpg" alt="Thunder Rush Rapid" />
+          <figcaption>Thunder Rush</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <h2>Ready for Your Adventure?</h2>
+      <a href="trips.html" class="cta-button">View Trips</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 White Water Rafting Co. | Paul Benson Ikechukwu</p>
+  </footer>
+
+</body>
 </html>
